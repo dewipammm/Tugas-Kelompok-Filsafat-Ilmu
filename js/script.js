@@ -1,0 +1,114 @@
+AOS.init();
+
+// let suggestions = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe",
+//     "ActionScript",
+//     "AppleScript",
+//     "Asp",
+//     "BASIC",
+//     "C",
+//     "C++",
+//     "Clojure",
+//     "COBOL",
+//     "ColdFusion",
+//     "Erlang",
+//     "Fortran",
+//     "Groovy",
+//     "Haskell",
+//     "Java",
+//     "JavaScript",
+//     "Lisp",
+//     "Perl",
+//     "PHP",
+//     "Python",
+//     "Ruby",
+//     "Scala",
+//     "Scheme",
+//     "Channel",
+//     "CodingLab",
+//     "CodingNepal",
+//     "YouTube",
+//     "YouTuber",
+//     "YouTube Channel",
+//     "Blogger",
+//     "Bollywood",
+//     "Vlogger",
+//     "Vechiles",
+//     "Facebook",
+//     "Freelancer",
+//     "Facebook Page",
+//     "Designer",
+//     "Developer",
+//     "Web Designer",
+//     "Web Developer",
+//     "Login Form in HTML & CSS",
+//     "How to learn HTML & CSS",
+//     "How to learn JavaScript",
+//     "How to became Freelancer",
+//     "How to became Web Designer",
+//     "How to start Gaming Channel",
+//     "How to start YouTube Channel",
+//     "What does HTML stands for?",
+//     "What does CSS stands for?",
+// ];
+
+// // getting all required elements
+// const searchWrapper = document.querySelector(".search-input");
+// const inputBox = searchWrapper.querySelector("input");
+// const suggBox = searchWrapper.querySelector(".autocom-box");
+// const icon = searchWrapper.querySelector(".icon");
+// let linkTag = searchWrapper.querySelector("a");
+// let webLink;
+
+// // if user press any key and release
+// inputBox.onkeyup = (e)=>{
+//     let userData = e.target.value; //user enetered data
+//     let emptyArray = [];
+//     if(userData){
+//         icon.onclick = ()=>{
+//             webLink = "https://www.google.com/search?q=" + userData;
+//             linkTag.setAttribute("href", webLink);
+//             console.log(webLink);
+//             linkTag.click();
+//         }
+//         emptyArray = suggestions.filter((data)=>{
+//             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+//             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
+//         });
+//         emptyArray = emptyArray.map((data)=>{
+//             // passing return data inside li tag
+//             return data = '<li>'+ data +'</li>';
+//         });
+//         searchWrapper.classList.add("active"); //show autocomplete box
+//         showSuggestions(emptyArray);
+//         let allList = suggBox.querySelectorAll("li");
+//         for (let i = 0; i < allList.length; i++) {
+//             //adding onclick attribute in all li tag
+//             allList[i].setAttribute("onclick", "select(this)");
+//         }
+//     }else{
+//         searchWrapper.classList.remove("active"); //hide autocomplete box
+//     }
+// }
+
+// function select(element){
+//     let selectData = element.textContent;
+//     inputBox.value = selectData;
+//     icon.onclick = ()=>{
+//         webLink = "https://www.google.com/search?q=" + selectData;
+//         linkTag.setAttribute("href", webLink);
+//         linkTag.click();
+//     }
+//     searchWrapper.classList.remove("active");
+// }
+
+// function showSuggestions(list){
+//     let listData;
+//     if(!list.length){
+//         userValue = inputBox.value;
+//         listData = '<li>'+ userValue +'</li>';
+//     }else{
+//         listData = list.join('');
+//     }
+//     suggBox.innerHTML = listData;
+// }
+

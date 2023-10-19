@@ -1,0 +1,287 @@
+@import 'font.css';
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: nunitoRegular;
+	box-sizing: border-box;
+}
+
+body {
+	color: #222831;
+	overflow-x: hidden;
+	background-image: url(../img/b1.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+
+a {
+	padding: 10px 20px;
+	border-radius: 40px;
+	text-decoration: none;
+	border:1px solid transparent;
+}
+
+
+ul li {
+	list-style-type: none;
+}
+
+
+
+header {
+	text-align: center;
+	padding: 20px;
+	background-color: #222831;
+	color: #70fcfc;
+}
+
+nav {
+	display: flex;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+nav .nav-items {
+	width: 82%;
+	padding-left:  20px;
+}
+
+nav .nav-items ul li {
+	display: inline-block;
+	margin-right: 50px; 
+}
+
+nav a {
+	background-color: #222831;
+	color: #69ffda;
+	font-weight: bold;
+}
+
+nav a:hover {
+	background-color: transparent;
+	border:1px solid #222831;
+	color: #222831;
+}
+
+nav .nav-sidebar {
+	display: flex;
+}
+
+nav .nav-sidebar .search-input {
+	margin-top: -13px;
+	width: 100%;
+	background: #fff;
+  	border-radius: 5px;
+  	position: relative;
+  	box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+
+nav .autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+
+.autocom-box li:hover{
+  background: #70fcfc;
+  color: #222831;
+}
+
+
+main {
+	padding: 10px 30px;
+	display: flex;
+}
+
+.content {
+	width: 80%;
+}
+
+.content .content-about {
+	margin-bottom: 10px;
+}
+
+.content .content-news {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.content .content-news .content-items {
+	margin: 10px 0 ;
+	width: 48%;
+	cursor: pointer;
+}
+
+.content .content-news .content-flex:after {
+	content: "Read More";
+	text-decoration: underline;
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	top: -100%;
+	background-color: rgba(34,40,49,.98);
+	width: 100%;
+	height: 100%;
+	transition: all .5s ease;
+	color: #70ffdb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.content .content-news .content-items:hover .content-flex:after{
+	top: 0;
+}
+
+.content .content-news .content-items:hover img {
+	transform: scale(1.2);
+}
+
+.content .content-news .content-items h3 {
+	background-color: #222831;
+	color: #70ffe7;
+	padding: 20px;
+}
+
+.content .content-items .content-flex {
+	display: flex;
+	background-color: #70ffff;
+	padding: 10px 20px 10px 20px;
+	position: relative;
+	overflow:hidden;
+}
+
+
+.content .content-items .content-flex img {
+	margin-bottom: -5px;
+	transition: all 0.3s ease;
+	width: 150px;
+}
+
+.content .content-items .content-flex .img {
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	width: 152px;
+	border:4px solid rgba(0,0,0,.2);
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.content .content-items .content-flex p {
+	padding: 5px 10px;
+	margin-bottom: 8px;
+}
+
+.sidebar {
+	padding: 0 40px;
+}
+
+.sidebar ul {
+	margin-top: 20px;
+}
+
+.sidebar ul li {
+	margin-bottom: 40px;
+	margin-left: 10px;
+	text-align: center;
+}
+
+main .sidebar ul li a {
+	color: #222831;
+	background-color: #70fdda;
+}
+
+main .sidebar ul li a:hover {
+	background-color: #222831;
+	color: #ffd369;
+	box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	padding: 20px 40px;
+	width: 100%;
+	background-color: #222831;
+	color: #51a0eb;
+}
+
+
+@media only screen and (max-width: 1247px) {
+	nav {
+		flex-wrap: wrap;
+	}
+	nav .nav-sidebar {
+		margin:0 0 0 20px;
+	}
+	nav .nav-sidebar, .nav-items {
+		width: 100% !important;
+		justify-content: center;
+	}
+	nav .nav-items ul {
+		text-align: center;
+	}
+	nav .nav-items ul li{
+		margin-bottom: 40px;
+	}
+	nav .nav-sidebar .nav-search {
+		width: 50%;
+		margin-top: -2px;
+	}
+	
+
+	main, nav {
+		flex-wrap: wrap;
+	}
+	.content {
+		width: 100%;
+	}
+	.sidebar {
+		width: 100%;
+		text-align: center;	
+		margin-bottom: 60px;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	main, nav {
+		margin: 0 ;
+	}
+	
+	nav {
+		padding: 30px 0 30px 20px;
+		text-align: center;
+	}
+	nav .nav-sidebar {
+		justify-content: center;
+		margin-top: 10px;
+	}
+	nav .nav-sidebar .nav-search {
+		width: 50%;
+	}
+
+
+	.content .content-news .content-items {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.content .content-news .content-items .content-flex {
+		flex-direction: column;
+		text-align: center;
+	}
+	.content .content-news .content-items .content-flex .img {
+		margin: 0 auto;
+	}
+}
